@@ -1,16 +1,23 @@
 <!DOCTYPE html>
+<!--Iniciamos el documento con la etiquieta a continuación-->
 <html>
 <head>
+<!--Especificamos los caracteres-->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--Especificamos el titulo de la página-->
   <title>Calculadora</title>
+<!--Enlazamos una hoja de estilos que contendra nuestro proyecto-->
   <link rel="stylesheet" type="text/css" href="./style/styles.css">
 </head>
+<!--Definimos el cuerpo del documento con la etiqueta a continuación-->
 <body>
   <div class="calculator">
     <input type="text" id="display" readonly>
+<!--Los botones numerados del 0 al 9 y los operadores matemáticos (+, -, *, /) llaman a la función appendValue() 
+con el número u operador correspondiente como argumento-->
     <div class="buttons">
-      <button onclick="clearDisplay()">C</button>
+      <button onclick="appendValue('+')">+</button>
       <button onclick="appendValue(7)">7</button>
       <button onclick="appendValue(8)">8</button>
       <button onclick="appendValue(9)">9</button>
@@ -25,11 +32,15 @@
       <button onclick="appendValue('-')">-</button>
       <button onclick="appendValue(0)">0</button>
       <button onclick="appendValue('.')">.</button>
+<!--El botón "=" llama a la función calculate() para realizar el cálculo-->
       <button onclick="calculate()">=</button>
-      <button onclick="appendValue('+')">+</button>
+<!--El botón "C" llama a la función clearDisplay() para borrar el contenido del campo de entrada.-->
+      <button onclick="clearDisplay()">C</button>
     </div>
   </div>
 
+<!--Al final del documento, se incluye un archivo de script externo mediante la etiqueta <script>.
+El atributo src especifica la ruta al archivo JavaScript (./js/script.js)-->
   <script src="./js/script.js"></script>
 </body>
 </html>
